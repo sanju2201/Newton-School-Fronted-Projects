@@ -1,10 +1,9 @@
 *{
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  list-style: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* list-style: none; */
-
 }
 
 body{
@@ -29,13 +28,9 @@ body{
   justify-content: center;
   /* background-color: #979797; */
   /* padding: 20px; */
+  /* box-shadow: 0 35px 55px rgba(0,0,0,0.5); */
 }
 
-/* @media screen and(max-width:673px) {
-.main-content {grid-template-columns: repeat(1,1fr);
-  
-} 
-} */
 
 
 .main-content .left-content{
@@ -60,12 +55,12 @@ body{
 
 .profile-details .profile-image{
   position: relative;
+  height: 150px;
   padding: 1rem;
-  
   margin: auto;
   border-radius: 30%;
   width: 60%;
-  height: 150px;
+ 
   border: 5px solid white;
   overflow: hidden;
   
@@ -178,7 +173,7 @@ body{
   height: 100%;
   padding: 2rem 3rem;
   flex-direction: column;
-  row-gap: 50px;
+  row-gap: 20px;
 }
 
 
@@ -190,17 +185,68 @@ body{
   letter-spacing: 1px;
 }
 
-.about-section, .education-section, .experience-section, .project-section{
-  border: 2px dashed black;
+.about-me{
+  margin-bottom: 0px;
+}
+
+.about-me:last-child{
+  margin-bottom: 0px;
 }
 
 
-@media (max-width: 1000px) {
-.main-content{
-  margin: 10px;
-  grid-template-coluns:repeat(1,1fr) ;
-}  
+.about-experience .box{
+display: flex;  
+flex-direction: row;
+margin: 10px 0;
 }
 
 
+.about-experience .box .year-company{
+  min-width: 150px;
+}
 
+.about-experience .box .year-company h5{
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 700;
+}
+.about-experience .box .text{
+  margin-left: 20px;
+}
+
+.about-experience .box .text h4{
+  text-transform: uppercase;
+  color: #2a7da2;
+  font-size: 16px;
+}
+
+.about-education .box{
+  display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+}
+
+.about-education .box .degree{
+  color: #5c8091;
+  font-size: 1.1rem;
+}
+
+.about-projects .box{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+@media (max-width :674px){
+  .main-content{
+    margin: 10px;
+    grid-template-columns: repeat(1,1fr);
+     width: 90%;
+     min-height: 1000px;
+
+  }
+
+  .about-experience .box{
+    flex-direction: column;
+  }
+}
