@@ -1,0 +1,128 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: grid;
+    justify-items: center;
+    /* align-items: center;  */
+    align-content: center;
+    height: 100%; 
+}
+
+#main{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    /* height: 75vh;
+    width: 50vw; */
+    height: 500px;
+    width: 750px;
+    background-color: black;  
+    
+}
+
+.container{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 85%;
+    width: 90%;
+    grid-template-rows: 45% auto;
+    background-color: rgb(255, 253, 253);
+    border-radius: 11px;
+    overflow: hidden;
+}
+
+.community{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    row-gap: 15px;    
+}
+
+.community-header{
+    color: rgb(1, 166, 255);
+    font-size: 1.2rem;
+}
+
+.community-offer{
+font-size: 0.9rem;
+font-weight: 700;
+color: rgb(12, 163, 37);
+}
+
+.community-details{
+    font-size: 0.75rem;
+    color: rgb(122, 118, 118);
+   font-weight:bold;
+   text-align: center;
+   margin: 0 20px;
+    
+}
+
+.card-details{
+    display:flex;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.card{
+    display: flex;
+    width:50%;
+    background-color: rgb(15, 67, 66);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+   
+}
+
+.card-header{
+font-weight:700;
+}
+
+.card p{
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.price{
+font-size: 1.8rem;
+font-weight: 600;
+}
+
+.btn{
+    height: 35px;
+    width: 150px;
+    border-radius: 8px;
+    background-color: rgb(98, 158, 25);
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+
+}
+
+.why-us{
+    display: flex;
+    width: 50%;
+    background-color: rgba(85, 145, 142, 0.698);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.why-us-content{
+  text-align: center;
+  letter-spacing: -1px;
+}
+
