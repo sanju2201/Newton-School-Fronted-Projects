@@ -12,6 +12,18 @@ button.addEventListener("click",(event)=>{
  let namePlace = inputName.value;
  let yearPlace = inputYear.value;
 
- url.innerText = `${textPlace}?name=${namePlace}&year=${yearPlace}`;
+if(namePlace != "" && yearPlace != ""){
+url.innerText = `${textPlace}?name=${namePlace}&year=${yearPlace}`;
+}
+else
+ if(namePlace == "" && yearPlace != ""){
+ url.innerText = `${textPlace}?year=${yearPlace}`;
+}
+else if(namePlace != "" && yearPlace == ""){
+url.innerText = `${textPlace}?name=${namePlace}`;
+}
+
+inputName.value = "";
+inputYear.value = "";
 
 })
