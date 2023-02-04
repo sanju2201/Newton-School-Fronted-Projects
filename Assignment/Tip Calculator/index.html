@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    Bill amount: <input type="number" id="billamt"> <br>
+    No. of People: <input type="number" id="peopleamt"> <br>
+    Choose Option: <select id="serviceQual"> <br>
+      <option value="0.05">5%</option>
+      <option value="0.1">10%</option>
+      <option value="0.15">15%</option>
+      <option value="0.2">20%</option>
+      <option value="0.25">25%</option>
+      <option value="0.3">30%</option>
+    </select><br>
+    <button id="calculate">Calculate</button>
+    <br>
+    <h3 id="show">Tip -</h3>
+
+  </div>
+
+</body>
+
 </html>
