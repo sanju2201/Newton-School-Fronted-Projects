@@ -1,0 +1,42 @@
+/* <!-- // <<<<-------- for Random Color Generator------------> */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: yellow; */
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+}
+h1{
+    background: #333;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    color: #efefef;
+}
+
+button {
+    padding: 1rem 4rem;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    transition: background 0.4s;
+
+}
+
+button:hover{
+    background: rgb(214,214,214);
+}
