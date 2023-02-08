@@ -199,9 +199,132 @@ callingFun();
 
 // --------------------------------------//
 
+// fetch api
+/*
+fetch("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo")
+    .then((res) => {
+        return res.json();
+    }).then((ans) => {
+        console.log(ans);
+    });
+*/
+// --------------------------------------//
+
+// Fetch API Function
+
+/*
+fetch("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo")
+    .then((res) => {
+        if (res.ok) {
+            return res.json();
+        }
+        throw new Error("Request Failed");
+    }, networkError => {
+        console.log(networkError.message);
+    }).then((res) => {
+        console.log(res);
+    })
+*/
+// --------------------------------------//
+
+// Fetch API Function with Async Await
+/*
+async function func() {
+    const fetching = await fetch("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo");
+    const response = await fetching.json();
+    console.log(response);
+}
+
+function calling() {
+    setTimeout(() => {
+        func();
+    }, 2000);
+}
+
+calling();
+*/
 
 
+// --------------------------------------//
+
+// Axios
+//  Axios used to make REST API calls in an efficient manner
+// Axios is a promise-based HTTP Client for node.js and the browser.
+// This is a library so 1st we need to add this to our file
+// for now we are adding by script tag
+/*
+axios.get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo")
+    .then((res) => { console.log(res) })
+    .catch((err) => {
+        console.log(err);
+    });
+*/
+
+// --------------------------------------//
+// Using async await
+/*
+async function func() {
+    try {
+        const response = await axios.get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo")
+        console.log(response);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+func();
+*/
+
+// --------------------------------------//
+// In case API calling are not dependent on each other we no need to use async await
+
+// const postApi = axios.get("https://jsonplaceholder.typicode.com/posts");
+// const commentsApi = axios.get("https://jsonplaceholder.typicode.com/comments");
+// const albumApi = axios.get("https://jsonplaceholder.typicode.com/albums");
+// const todosApi = axios.get("https://jsonplaceholder.typicode.com/users");
+
+// const arrayOfPromises = [postApi, commentsApi, albumApi, todosApi];
+
+/*
+// Promise all function will wait till all the API fulfilled or any of the API call Rejected then the Promise.all() method will executes
+
+Promise.all(arrayOfPromises)
+    .then((res) => {
+        console.log(res);
+    })
+    .catch(err => {
+        console.log(err);
+    })
+    .finally((data) => {
+        console.log(data);
+    })
 
 
+    // So this way if one of the API call will fail, then we lost rest of the API called detailed also
+    // so to overcome this there is one more method called Promise.allSettled();
+ */
+
+//  This method will return all the results wheather they are fulfilled or rejected
+/*
+Promise.allSettled(arrayOfPromises)
+    .then((res) => {
+        console.log(res);
+    }).catch((err) => {
+        console.log(err);
+    })
+*/
 
 
+/*
+//  Promise.race() method return the fastest return among them which ever will fulfilled first
+Promise.race(arrayOfPromises)
+    .then((res) => {
+        console.log(res);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+
+*/
+
+// --------------------------------------//
