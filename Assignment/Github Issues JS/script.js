@@ -23,13 +23,12 @@ prev.addEventListener("click", () => {
     if (counter <= 1) {
         counter = 1;
         prev.disabled = true;
-        next.disabled = false;
-        prev.style.backgroundColor = "red";
     }
     else {
         prev.disabled = false;
-        prev.style.backgroundColor = "";
     }
+    next.disabled = false;
+    pageNumber.textContent = `Page number ${counter}`;
     console.log(counter);
     // fetchData(counter);
 });
@@ -39,13 +38,12 @@ next.addEventListener("click", () => {
     if (counter >= 5) {
         counter = 5;
         next.disabled = true;
-        prev.disabled = false;
-        prev.style.backgroundColor = "red";
     }
     else {
         next.disabled = false;
-        prev.style.backgroundColor = "";
     }
+    prev.disabled = false;
+    pageNumber.textContent = `Page number ${counter}`;
     console.log(counter);
     // fetchData(counter);
 });
