@@ -1,13 +1,27 @@
 const gameContainer = document.getElementById("gameContainer");
+const scoreContainer = document.getElementById("scoreContainer");
+const onScreenController = document.getElementById("onScreenController");
+const pointEarned = document.getElementById("pointEarned");
+const leftButton = document.getElementById("leftButton");
+const upButton = document.getElementById("upButton");
+const downButton = document.getElementById("downButton");
+const rightButton = document.getElementById("rightButton");
 
-for (let i = 1; i <= 1600; i++) {
-    let onePixel = document.createElement("div");
-    onePixel.id = `pixel${i}`;
-    onePixel.style.height = "10px";
-    onePixel.style.width = "10px";
-    onePixel.style.backgroundColor = "white";
-    gameContainer.appendChild(onePixel);
-}
 
-let food = document.createElement("div");
-// food.id =
+const gamePixal = 40;
+const squareOfGamePixal = Math.pow(gamePixal, 2);
+
+let changeTheDirOnce = false;
+let totalFoodAte = 0;
+let totalDistanceTravelled = 0;
+
+const createGameBoardPixels = () => {
+    let a = "";
+    for (let i = 1; i <= squareOfGamePixal; i++) {
+        a += `<div class="gameBoardPixal" id="pixel${i}"></div>`;
+    }
+
+    gameContainer.innerHTML = a;
+};
+
+const gameBoardPixal = document.getElementsByClassName("gameBoardPixal");

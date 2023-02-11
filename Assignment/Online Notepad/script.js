@@ -1,23 +1,22 @@
-const checkBox = document.getElementById("feature-flag");
-const textArea = document.getElementById("textarea");
-let key = "content", value = "";
+// javascript code goes here
 
-window.addEventListener("load", () => {
-    checkBox.checked = false;
-    textArea.textContent = localStorage.getItem(key)
-});
-
-// textArea.addEventListener("input", autoSave);
-
-checkBox.addEventListener("click", autoSave)
+let textarea = document.getElementById('textarea');
+let featureFlag = document.getElementById('feature-flag');
 
 
-function autoSave() {
-    setInterval(() => {
-        if (checkBox.checked) {
-            value = textArea.value;
-            localStorage.setItem(key, value);
-            console.log(key + " ==> " + value);
-        }
-    }, 1000)
+function firstLoad() {
+    if (window.localStorage.getItem("autosave-data")) {
+        textarea.value = window.localStorage.getItem("autosave-data");
+    }
+    updateLocalStorage();
 }
+
+function updateLocalStorage() {
+    setInterval(() => {
+        let inputData = textarea.value;
+        if (featureFlag.checked) {
+            window.localStorage.setItem("autosave-data", inputData);
+        }
+    }, 1000);
+}
+firstLoad();

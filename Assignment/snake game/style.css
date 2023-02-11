@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -7,17 +7,82 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgb(108, 2, 83), rgb(24, 0, 19));
+  background: white;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 #gameContainer {
-  height: 400px;
-  width: 400px;
-  /* background: yellow; */
-  display: flex;
-  flex-wrap: wrap;
+  height: 40vw;
+  width: 40vw;
+  background: rgb(0, 0, 0);
+  /* display: flex;
+  flex-wrap: wrap; */
+}
 
+.gameBoardPixal {
+  height: 1vw;
+  width: 1vw;
+  border-radius: 8px;
+  float: left;
+}
+
+.snakeBodyPixal {
+  background-color: rgb(43, 255, 0);
+}
+
+.food {
+  background-color: rgb(40, 40, 255);
+}
+
+.scoreBoard {
+  font-size: 50px;
+  display: inline-block;
+  padding: 5px;
+}
+
+#onScreenController {
+  /* display: none; */
+}
+
+#onScreenController {
+  width: 200px;
+  height: 120px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#onScreenController button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#onScreenController div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#onScreenController i {
+  width: 100%;
+  height: 100%;
+  /* color: white; */
+  /* background: red; */
+}
+
+.developerDetails {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  color: yellow;
 }
